@@ -21,7 +21,12 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "{custom-elements-es5-adapter.js,*loader.js,bundles/*.js}",
+                "input": "node_modules/@webcomponents/webcomponentsjs/",
+                "output": "./assets/static/"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -52,6 +57,9 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "es5": {
+              "tsConfig": "./tsconfig.es5.json"
             }
           }
         },
@@ -63,6 +71,9 @@
           "configurations": {
             "production": {
               "browserTarget": "ng-v8-with-wc-polyfills:build:production"
+            },
+            "es5": {
+              "browserTarget": "ng-v8-with-wc-polyfills:build:es5"
             }
           }
         },
