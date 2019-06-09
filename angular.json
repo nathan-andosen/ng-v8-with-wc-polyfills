@@ -23,7 +23,7 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "{custom-elements-es5-adapter.js,*loader.js,bundles/*.js}",
+                "glob": "{custom-elements-es5-adapter.js,*loader.js,bundles/*.js,bundles/*.map}",
                 "input": "node_modules/@webcomponents/webcomponentsjs/",
                 "output": "./assets/static/"
               }
